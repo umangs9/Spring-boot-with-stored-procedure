@@ -10,6 +10,6 @@ public class CheckForm {
 	public void setCheck(String check) {
 		this.check = check;
 	}
-	
+	/**/
 	
 }
