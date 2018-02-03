@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+	<form action="#" th:action="@{/checkform}" th:object="${checkform}"
+		method="post">
+		<p>
+			Check how many males/females in database:<select id="check"
+				name="check">
+				<option selected="selected">-- Select Gender --</option>
+				<option value="m">Male</option>
+				<option value="f">Female</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+
+	<p th:text="'content: ' + ${list}" />
+	<!-- <form:options items="${lookingfor}" itemValue="lookingfor"
+		itemLabel="lookingfor" /> -->
+</body>
+</html>

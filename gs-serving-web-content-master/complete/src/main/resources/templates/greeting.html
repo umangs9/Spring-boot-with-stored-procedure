@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+	<form action="#" th:action="@{/greeting}" th:object="${greeting}"
+		method="post">
+		<p>
+			Name: <input type="text" th:field="*{content}" />
+		</p>
+		<p>
+			Password: <input type="password" th:field="*{password}" />
+		</p>
+		<p>
+			Gender:&nbsp;&nbsp;&nbsp; Male: <input type="radio"
+				th:field="*{gender}" value="m"></input> Female: <input
+				type="radio" th:field="*{gender}" value="f"></input>
+		</p>
+		<p>
+			Email Id: <input type="email" th:field="*{email}" />
+		</p>
+		<p>
+			Mobile No. : <input type="text" th:field="*{mobile}" />
+		</p>
+		<p>
+			Salary. : <input type="text" th:field="*{salary}" />
+		</p>
+		<p>
+			City: <input type="text" th:field="*{city}" />
+		</p>
+
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+</body>
+</html>
